@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="stepper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI Stepper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kz0-aK-cnn">
+                                <rect key="frame" x="136.66666666666666" y="30" width="140.99999999999997" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of Items : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2C-Le-Oqk">
+                                <rect key="frame" x="20" y="96" width="163" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRk-KK-lDp">
+                                <rect key="frame" x="184" y="96" width="13" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Er6-S2-BZT">
+                                <rect key="frame" x="300" y="92" width="94" height="32"/>
+                                <connections>
+                                    <action selector="count:" destination="BYZ-38-t0r" eventType="valueChanged" id="PyJ-gq-7ze"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom UI Stepper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcs-KJ-Apy">
+                                <rect key="frame" x="81" y="160" width="252" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1C-jN-N7r" customClass="GMStepper" customModule="stepper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="226" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Mt-9c-1er"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stepValue">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AN7-nV-cRd" customClass="GMStepper" customModule="stepper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="296" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gTG-lg-paB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stepValue">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="leftButtonText" value="&lt;"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="rightButtonText" value="&gt;"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k1C-jN-N7r" secondAttribute="trailing" constant="20" id="0gA-Pn-Dyt"/>
+                            <constraint firstItem="AN7-nV-cRd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0gF-Hg-fZO"/>
+                            <constraint firstItem="Kz0-aK-cnn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0kA-3B-KYe"/>
+                            <constraint firstItem="AN7-nV-cRd" firstAttribute="top" secondItem="k1C-jN-N7r" secondAttribute="bottom" constant="30" id="18M-tM-xe8"/>
+                            <constraint firstItem="tcs-KJ-Apy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1tL-8f-P1R"/>
+                            <constraint firstItem="k1C-jN-N7r" firstAttribute="top" secondItem="tcs-KJ-Apy" secondAttribute="bottom" constant="30" id="2pn-zs-DkR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AN7-nV-cRd" secondAttribute="trailing" constant="20" id="8Kj-db-CRp"/>
+                            <constraint firstItem="AN7-nV-cRd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9aV-d0-75o"/>
+                            <constraint firstItem="tcs-KJ-Apy" firstAttribute="top" secondItem="L2C-Le-Oqk" secondAttribute="bottom" constant="40" id="EHm-0g-VZN"/>
+                            <constraint firstItem="jRk-KK-lDp" firstAttribute="centerY" secondItem="L2C-Le-Oqk" secondAttribute="centerY" id="JSi-Mj-8Yk"/>
+                            <constraint firstItem="jRk-KK-lDp" firstAttribute="centerY" secondItem="L2C-Le-Oqk" secondAttribute="centerY" id="LIc-ru-14Q"/>
+                            <constraint firstItem="Er6-S2-BZT" firstAttribute="centerY" secondItem="L2C-Le-Oqk" secondAttribute="centerY" id="PJU-c5-dpN"/>
+                            <constraint firstItem="L2C-Le-Oqk" firstAttribute="top" secondItem="Kz0-aK-cnn" secondAttribute="bottom" constant="30" id="QjX-D5-dB2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Er6-S2-BZT" secondAttribute="trailing" constant="20" id="WDg-qr-XlH"/>
+                            <constraint firstItem="jRk-KK-lDp" firstAttribute="top" secondItem="Kz0-aK-cnn" secondAttribute="bottom" constant="30" id="Z4M-4j-TYI"/>
+                            <constraint firstItem="L2C-Le-Oqk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="btg-fa-VAS"/>
+                            <constraint firstItem="Kz0-aK-cnn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="deG-cj-d5M"/>
+                            <constraint firstItem="k1C-jN-N7r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pxx-vK-kwi"/>
+                            <constraint firstItem="jRk-KK-lDp" firstAttribute="leading" secondItem="L2C-Le-Oqk" secondAttribute="trailing" constant="1" id="w6U-e3-NQg"/>
+                            <constraint firstItem="k1C-jN-N7r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zRa-H1-dQJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lable" destination="jRk-KK-lDp" id="1RI-np-loR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="127"/>
+        </scene>
+    </scenes>
+</document>
